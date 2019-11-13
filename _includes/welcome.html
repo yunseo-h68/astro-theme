@@ -1,0 +1,12 @@
+<div id="welcome">
+  <p class="top-p"></p>
+  <div class="welcome-astro">
+    <p>Welcome To Our Space</p>
+    <h1>
+      {{ site.title }}
+      {% if page.type != "home" %}
+        - {{ page.type | upcase }}
+      {% endif %}
+    </h1>
+  </div>
+</div>

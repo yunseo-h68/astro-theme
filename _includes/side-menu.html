@@ -1,0 +1,11 @@
+<div id="sideMenu" class="side-menu">
+  <div class="side-menu_wrap">
+    <a href="javascript:void();" class="side-menu_closebtn" onclick="closeSideMenu();">&times;</a>
+    <ul class="side-menu_content">
+      <li><a href="/blog/" class="side-menu_link">Blog</a></li>
+      {% for category in site.data.categories %}
+        <li><a href="#" class="side-menu_link">{{ category.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

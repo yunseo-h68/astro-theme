@@ -1,0 +1,47 @@
+<header id="header">
+  <div class="header-astro">
+
+    <div class="side-menu-icon">
+      <div class="side-menu-icon_wrap">
+        <a href="javascript:void();" class="side-menu-icon_link" onclick="openSideMenu();">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <h1 class="header_logo">
+      <a href="{{ site.baseurl }}#welcome" class="logo_link">
+        <div class="logo_wrap">
+          <img src="{{ '/assets/image/skin_aurora/logo.jpg' | relative_url }}" style="width:32px;" alt="{{ site.title }} logo">
+          <span class="logo_title">{{ site.title}}</span>
+        </div>
+      </a>
+    </h1>
+
+    <div id="menuWrap" class="menu-wrap">
+      <div class="menu-wrap_menu-content">
+        <nav id="Gnb" class="main-menu">
+          <ul class="gnb_list" role="menu">
+
+            <li class="gnb_menu_list">
+              <a href="{{ site.baseurl }}#about" class="gnb_link">About</a>
+            </li>
+
+            <li class="gnb_menu_list">
+              <a href="{{ site.baseurl }}#career" class="gnb_link">Career</a>
+            </li>
+
+            <li class="gnb_menu_list">
+              <a href="{{ site.baseurl }}#projects" class="gnb_link">Projects</a>
+            </li>
+
+            <li class="gnb_menu_list">
+              <a href="{{ site.baseurl }}#contact" class="gnb_link">Contact</a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

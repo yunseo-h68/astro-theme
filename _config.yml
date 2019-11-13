@@ -1,0 +1,23 @@
+title: ASTRO # your site name
+author :
+  name: Yunseo Hwang # your name
+  github_username: yunseo-h # your github username
+  #linkedin_id: your-linkein-id # your linkedin id
+  #facebook_username: your-facebook-username # your facebook username
+  #twitter_username: your-twitter_username # your twitter username
+  email: yunseo.h68@gmail.com
+
+description: Welcome To Our Space # Write an awesome description for your new site here.
+
+baseurl: "/"
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+astro:
+  date_format: "%b %-d, %Y"
+
+skin: aurora # skin : aurora, earth
+
+# Build settings
+markdown: kramdown # Exclude from processing.
+plugins:
+  - jekyll-seo-tag

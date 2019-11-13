@@ -1,0 +1,21 @@
+<div id="career" class="section">
+  <p class="top-p"></p>
+  <div class="section-astro">
+    <h1>My Career</h1>
+    <div class="article-astro">
+      <ul>
+
+        {% for career in site.data.career %}
+        <li>
+          <p class="career_date">{{ career.date }}</p>
+          <p class="career_job">{{ career.job }}</p>
+          <h2 class="career_title">{{ career.title }}</h2>
+          <p class="career_description">{{ career.description }}</p>
+        </li>
+        {% endfor %}
+
+      </ul>
+    </div>
+  </div>
+  <p class="bottom-p"></p>
+</div>

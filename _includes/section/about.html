@@ -1,0 +1,37 @@
+<div id="about" class="section">
+  <p class="top-p"></p>
+  <div class="section-astro">
+    <h1>About Me</h1>
+    <div class="article-astro">
+
+      <div class="about_img">
+        <img src="{{ '/assets/image/skin_aurora/avatar.jpg' | relative_url }}" width="100%"alt="profile img">
+      </div>
+
+      <div class="about_information">
+        <h1 class="about_title">{{ site.data.about.title }}</h1>
+        <p class="about_description">{{ site.data.about.description }}</p>
+
+        <ul class="about_social-icon">
+          {% if site.author.github_username %}
+            <li><a href="https://github.com/{{ site.author.github_username }}" target="_blank" rel="noopener"><i class="fa fa-github"></i></a></li>
+          {% endif %}
+          {% if site.author.linkedin_id %}
+            <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin_id }}" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i></a></li>
+          {% endif %}
+          {% if site.author.facebook_username %}
+            <li><a href="https://www.facebook.com/{{ site.author.facebook_username }}" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a></li>
+          {% endif %}
+          {% if site.author.twitter_username %}
+            <li><a href="https://twitter.com/{{ site.author.twitter_username }}" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>
+          {% endif %}
+          {% if site.author.email %}
+            <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope-o"></i></a></li>
+          {% endif %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <p class="bottom-p"></p>
+</div>

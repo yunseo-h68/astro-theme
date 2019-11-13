@@ -1,0 +1,42 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0">
+  <meta property="og:image" content="{{ '/assets/image/skin_aurora/mainImage.png' | relative_url }}">
+  <link rel="shortcut icon" href="{{ '/assets/image/skin_aurora/logo.ico' | relative_url }}">
+  {% seo %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+  {% if site.skin == 'aurora' %}
+    <link rel="stylesheet" href="{{ '/assets/css/aurora/style.css' | relative_url }}">
+  {% elsif site.skin == 'earth' %}
+    <link rel="stylesheet" href="{{ '/assets/css/earth/style.css' | relative_url }}">
+  {% endif %}
+
+  <style media="screen">
+    /* background img */
+    {% if site.skin == 'aurora' %}
+
+      .parallax{background-image: url("{{ '/assets/image/skin_aurora/aurora.jpg' | relative_url }}");}
+      #contact .contact-form button:hover{background-image: url("{{ '/assets/image/skin_aurora/aurora.jpg' | relative_url }}");}
+      #sideMenu .side-menu_wrap{background-image: url("{{ '/assets/image/skin_earth/earth-desktop.jpg' | relative_url }}");}
+
+      @media only screen and (max-width: 1080px){
+        #sideMenu .side-menu_wrap{background-image: url("{{ '/assets/image/skin_earth/earth-mobile.jpg' | relative_url }}");}
+      }
+
+    {% elsif site.skin == 'earth' %}
+      .parallax{background-image: url("{{ '/assets/image/skin_earth/earth-desktop.jpg' | relative_url }}");}
+      #contact .contact-form button:hover{background-image: url("{{ '/assets/image/skin_earth/aurora.jpg' | relative_url }}");}
+      #sideMenu .side-menu_wrap{background-image: url("{{ '/assets/image/skin_earth/earth-desktop.jpg' | relative_url }}");}
+
+      @media only screen and (max-width: 1080px){
+        .parallax{background-image: url("{{ '/assets/image/skin_earth/earth-mobile.jpg' | relative_url }}");}
+        #sideMenu .side-menu_wrap{background-image: url("{{ '/assets/image/skin_earth/earth-mobile.jpg' | relative_url }}");}
+      }
+
+    {% endif %}
+  </style>
+</head>

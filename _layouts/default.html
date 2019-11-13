@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" dir="ltr">
+
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    {% include side-menu.html %}
+
+    {% if page.type != '404' %}
+      <div class="parallax" {% if page.type != '404' %}style="min-height:100%;"{% endif %}>
+        {% include welcome.html %}
+      </div>
+    {% endif %}
+
+    <div class="parallax" {% if page.type == '404' %}style="min-height:100%;"{% endif %}>
+      {{ content }}
+
+      {% if page.type != '404' %}
+        {% include footer.html %}
+      {% else %}
+        <div >&nbsp;</div>
+      {% endif %}
+    </div>
+
+    {% if page.type == '404' %}
+      <div class="parallax">
+        {% include footer.html %}
+      </div>
+    {% endif %}
+
+    <script src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+
+  </body>
+</html>

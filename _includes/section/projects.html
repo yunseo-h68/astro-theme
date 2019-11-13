@@ -1,0 +1,26 @@
+<div id="projects" class="section">
+  <p class="top-p"></p>
+  <div class="section-astro">
+    <h1>My Projects</h1>
+    <div class="article-astro">
+      <ul>
+
+        {% for project in site.data.projects %}
+        <li>
+          <p class="project_development_period">{{ project.development_period }}</p>
+          {% if project.stack %}
+            <p class="project_stack">Stack : {{ project.stack }}</p>
+          {% endif %}
+          {% if project.source %}
+            <p class="project_link"><a href="{{ project.source }}" target="_blank" rel="noopener">Source</a></p>
+          {% endif %}
+          <h2 class="project_title">{{ project.title }}</h2>
+          <p class="project_description">{{ project.description }}</p>
+        </li>
+        {% endfor %}
+
+      </ul>
+    </div>
+  </div>
+  <p class="bottom-p"></p>
+</div>

@@ -1,0 +1,9 @@
+- title: Company A
+  description: I worked at Company A...
+  date: March 3, 2017 - March 25, 2017
+  job: Developer
+
+- title: Company B
+  description: I worked at Company B...
+  date: Jun 20, 2018 - Jun 30, 2018
+  job: Developer

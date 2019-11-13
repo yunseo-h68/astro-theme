@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div id="blog" class="section">
+  {%- if site.posts.size > 0 -%}
+    {%- for post in site.posts -%}
+      <p class="top-p"></p>
+        <div class="section-astro">
+          <div class="article-astro">
+
+              {{ content }}
+
+              <h1 class="post-list-heading">
+                <a class="post-link" href="{{ post.url | relative_url }}">
+                  {{ post.title | escape }}
+                </a>
+              </h1>
+              {%- assign date_format = site.astro.date_format | default: "%b %-d, %Y" -%}
+              <p class="post-meta">{{ post.date | date: date_format }}</p>
+
+              {%- if site.show_excerpts -%}
+                {{ post.excerpt }}
+              {%- endif -%}
+          </div>
+        </div>
+      <p class="bottom-p"></p>
+    {%- endfor -%}
+  {%- endif -%}
+</div>

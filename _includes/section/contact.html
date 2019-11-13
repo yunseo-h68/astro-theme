@@ -1,0 +1,21 @@
+<div id="contact" class="section">
+  <p class="top-p"></p>
+  <div class="section-astro">
+    <h1>Contact Me</h1>
+    <div class="article-astro">
+      <form class="contact-form" action="https://formspree.io/{{ site.author.email }}" method="POST">
+        <div class="sender-information">
+          <input type="text" name="name" placeholder="Your Name">
+          <input type="email" name="email" placeholder="Your Email">
+          <input type="text" name="_gotcha" style="display:none" />
+          <input type="hidden" name="_subject" value="{{ site.title }}에서 새로운 연락이 왔습니다." />
+        </div>
+        <div class="sending-message">
+          <textarea name="message" placeholder="Your Message"></textarea>
+        </div>
+        <button class="submit-button" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+  <p class="bottom-p"></p>
+</div>
